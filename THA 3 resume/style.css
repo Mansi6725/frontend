@@ -1,0 +1,40 @@
+.name{
+   /*background-color:  rgba(255, 255, 255, 0.8);*/
+   background-color: rgb(162, 207, 201);
+    text-align:center;
+    
+}
+h2,h4{
+    margin:0;
+    padding:0;
+}
+/*.v{
+    border-top:7px solid rgb(96, 223, 206);
+    position:absolute;
+    width:320px;
+    top:52px;
+    left:600px;
+}*/
+.Grid-container{
+    display:grid;
+    background-color: rgb(96, 223, 206);
+    grid-template-columns: auto auto;
+    
+    grid-column-gap: 5px;
+}
+.item1{
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 0px 100px 20px;
+    
+}
+.item2{
+    
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 20px 100px 20px;
+}
+hr{
+    width:30%;
+    height:3px;
+    background-color:rgb(96, 223, 206);
+}
