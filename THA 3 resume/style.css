@@ -25,7 +25,7 @@ h2,h4{
 .item1{
     
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px 0px 100px 20px;
+    padding: 20px 0px 90px 20px;
     
 }
 .item2{
@@ -37,4 +37,13 @@ hr{
     width:30%;
     height:3px;
     background-color:rgb(96, 223, 206);
+}
+.icon{
+    padding:18px 0px 0px 0px;
+    width:5%;
+    float:left;
+}
+.content{
+    width: 95%;
+    float:left;
 }
