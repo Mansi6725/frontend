@@ -1,14 +1,13 @@
 body{
-   margin-top:200px;
     display:flex;
     justify-content: center;
     align-items: center;
     background-color: rgb(253, 249, 245);
 }
 #container{
-    height:440px;
-    width:440px;
-    border:0.5px solid black;
+    height:640px;
+    width:640px;
+    border:10px solid black;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -17,10 +16,9 @@ body{
 }
 
 .box{
-    
     background-color: rgb(104, 12, 27);
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     border:1px solid black;
 }
 .box:hover{
