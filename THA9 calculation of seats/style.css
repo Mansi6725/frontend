@@ -1,0 +1,33 @@
+.all{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(253, 249, 245);
+}
+#view{
+    text-align: center;
+    font-weight: bold;
+}
+#container{
+    height:700px;
+    width:800px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    background-color: chocolate;
+}
+
+.box{
+    margin:5px;
+    background-color: rgb(104, 50, 12);
+    width:120px;
+    height:90px;
+}
+.box:hover{
+    opacity: 0.5;
+}
+
+.selected{
+    background-color: rgb(46, 24, 9);
+}
