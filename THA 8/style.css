@@ -1,12 +1,12 @@
 body{
+   height:100vh;
     display:flex;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(253, 249, 245);
 }
 #container{
     height:640px;
     width:640px;
+    margin:auto;
     border:10px solid black;
     display:flex;
     justify-content:center;
