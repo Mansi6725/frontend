@@ -22,7 +22,7 @@ body{
     border:1px solid black;
 }
 .box:hover{
-    opacity: 0.5;
+    opacity: .5;
 }
 .change{
     animation:light 20s infinite;

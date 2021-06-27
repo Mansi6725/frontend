@@ -13,7 +13,6 @@ function flipCard() {
   if (!hasFlippedCard) {
     hasFlippedCard = true;
     firstCard = this;
-
     return;
   }
 
@@ -40,7 +39,6 @@ function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
-
     resetBoard();
   }, 1500);
 }
