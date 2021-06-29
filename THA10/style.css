@@ -6,14 +6,38 @@
   
   body {
     height: 100vh;
-    display: flex;
-    background: #060AB2;
+    
   }
-  
+  #score{
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top:5%;
+    left:45%;
+    text-shadow:5px 5px 10px black;
+    font-family: "Lucida Console", "Courier New", monospace;
+   
+  }
+  #image {
+    background-image: url("img/friends-9.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+  }
+ 
   .memory-game {
+    position:absolute;
+    top:10%;
+    left:30%;
+    margin:auto;
     width: 640px;
     height: 640px;
-    margin: auto;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
@@ -43,10 +67,8 @@
   .back-face {
     width: 100%;
     height: 100%;
-    padding: 20px;
     position: absolute;
     border-radius: 5px;
-    background: #1C7CCC;
     backface-visibility: hidden;
   }
   
