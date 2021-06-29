@@ -23,6 +23,7 @@ WIN.src = "sound/win.mp3";
 const BRICK_HIT = new Audio();
 BRICK_HIT.src = "sound/brick_hit.mp3";
 
+
 // GAME VARIABLES AND CONSTANTS
 const PADDLE_WIDTH = 100;
 const PADDLE_MARGIN_BOTTOM = 50;
@@ -43,7 +44,7 @@ const paddle = {
     y : cvs.height - PADDLE_MARGIN_BOTTOM - PADDLE_HEIGHT,
     width : PADDLE_WIDTH,
     height : PADDLE_HEIGHT,
-    dx :5
+    dx :7
 }
 
 // DRAW PADDLE
@@ -85,7 +86,12 @@ function drawBall(){
     ctx.beginPath();
     
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI*2);
-    ctx.fillStyle = "#ffcd05";
+    if(LEVEL==1)
+    ctx.fillStyle = "white";
+    else if(LEVEL==2)
+    ctx.fillStyle="yellow";
+    else
+    ctx.fillStyle="pink";
     ctx.fill();
     
     ctx.strokeStyle = "#2e3548";
@@ -122,7 +128,7 @@ function ballWallCollision(){
 // RESET THE BALL
 function resetBall(){
     ball.x = cvs.width/2;
-    ball.y = paddle.y - BALL_RADIUS;
+    ball.y = paddle.y - ball.radius;
     ball.dx = 3 * (Math.random() * 2 - 1);
     ball.dy = -3;
 }
@@ -148,16 +154,17 @@ function ballPaddleCollision(){
         ball.dy = - ball.speed * Math.cos(angle);
     }
 }
+
 const brick = {
-    row : 1,
-    column : 5,
+    row : 2,
+    column : 6,
     width : 55,
     height : 20,
     offSetLeft : 20,
     offSetTop : 20,
     marginTop : 40,
     fillColor : "#2e3548",
-    strokeColor : "#FFF"
+    strokeColor : "#FFF",
 }
 
 let bricks = [];
@@ -186,7 +193,6 @@ function drawBricks(){
             if(b.status){
                 ctx.fillStyle = brick.fillColor;
                 ctx.fillRect(b.x, b.y, brick.width, brick.height);
-                
                 ctx.strokeStyle = brick.strokeColor;
                 ctx.strokeRect(b.x, b.y, brick.width, brick.height);
             }
@@ -255,10 +261,13 @@ function levelUp(){
         brick.row++;
         createBricks();
         ball.speed += 0.5;
+        ball.radius=4;
         resetBall();
         LEVEL++;
     }
 }
+
+
 
 function draw()
 {
@@ -272,8 +281,6 @@ function draw()
      // SHOW LEVEL
      showGameStats(LEVEL, cvs.width/2, 25, LEVEL_IMG, cvs.width/2 - 30, 5);
 }
-
-
 
 // UPDATE GAME FUNCTION
 function update(){
@@ -303,12 +310,10 @@ loop();
 const soundElement  = document.getElementById("sound");
 
 soundElement.addEventListener("click", audioManager);
-
 function audioManager(){
     // CHANGE IMAGE SOUND_ON/OFF
     let imgSrc = soundElement.getAttribute("src");
-    let SOUND_IMG = imgSrc == "img/SOUND_ON.png" ? "img/SOUND_OFF.png" : "img/SOUND_ON.png";
-    
+    SOUND_IMG =  imgSrc== "img/SOUND_ON.png" ? "img/SOUND_OFF.png" : "img/SOUND_ON.png";
     soundElement.setAttribute("src", SOUND_IMG);
     
     // MUTE AND UNMUTE SOUNDS
