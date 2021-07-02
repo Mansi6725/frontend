@@ -58,19 +58,19 @@ function resetBoard() {
       card.style.order = randomPos;
     });
   })();
- /*const play_again=document.getElementById("play_again");
- const game_over=document.getElementById("game-over");
- play_again.addEventListener('click',function(){
-   location.reload();
- })
-function playAgain()
-{
-  game_over.style.display="flex";
-  play_again.style.display="block";
-}
+//  const play_again=document.getElementById("play_again");
+//  const game_over=document.getElementById("game-over");
+//  play_again.addEventListener('click',function(){
+//    window.location.reload();
+//  })
+// function playAgain()
+// {
+//   game_over.style.display="flex";
+//   play_again.style.display="block";
+// }
 
-if(score===60)
-{
-  playAgain();
-}*/
-cards.forEach(card => card.addEventListener('click', flipCard));
+// if(score===60)
+// {
+//   playAgain();
+// }
+ cards.forEach(card => card.addEventListener('click', flipCard));
