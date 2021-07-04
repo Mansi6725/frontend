@@ -63,6 +63,11 @@ const questions=[
         option4.innerHTML=questions[queNo].d;
     }
  loadQuestion();
+ function deleteCheckRadio(){
+    answer.forEach((currentans)=>{
+       currentans.checked=false;
+      });
+ }
  function getCheckAnswer(){
     let ans;
  answer.forEach((currentans)=>{
@@ -77,6 +82,7 @@ const questions=[
      score++;
    }
     queNo++;
+    deleteCheckRadio();
     if(queNo<5){
      if(queNo==1)
      container.classList.add("bg2");
