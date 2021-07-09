@@ -23,6 +23,7 @@ function App() {
   let alternateColor = '#000';
   return (
     <div className="App">
+      <div className="container">
       {/* {
         a.map((element, key) => {
           return(
@@ -47,7 +48,7 @@ function App() {
           return(<Row startColor={startColor} alternateColor={alternateColor} key={key} />)
         })
       }
-      
+    </div>
     </div>
   );
 }
