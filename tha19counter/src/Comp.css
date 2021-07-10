@@ -1,0 +1,16 @@
+.comp{
+    height:100px;
+    width:100px;
+    border:3px solid rgba(0, 0, 0, 0.233);
+    /* text-align:center; */
+
+    background-color: rgba(0, 0, 0, 0.192);
+    cursor:pointer;
+}
+.comp h1{
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
