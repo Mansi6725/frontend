@@ -1,0 +1,21 @@
+.App {
+  /* text-align: center; */
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  padding:20px;
+ height:300px;
+ width:493.29px;
+ overflow:scroll;
+ overflow-x: hidden;
+ box-shadow:0 2px 2px 3px rgba(0,0,0, 0.2)
+}
+.container h1{
+  text-align: center;
+}
+
+
